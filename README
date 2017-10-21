@@ -1,0 +1,23 @@
+ngrams
+
+Generate character ngrams from an input file.
+
+Example:
+
+  $ cat test
+  abcde
+
+  $ ngrams 3 <test
+  abc
+  bcd
+  cde
+
+Combine with other programs, e.g. for a sorted frequency count:
+
+  $ ngrams <somefile | sort | uniq -c | sort
+
+Building:
+
+  make ngrams
+
+By Sijmen J. Mulder <ik@sjmulder.nl>
